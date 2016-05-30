@@ -11,6 +11,7 @@ The first MVP of Boba Finds Tea was created over three days and built using Sina
 Boba Finds Tea is deployed on [Heroku](https://damp-journey-79720.herokuapp.com/ "Boba Finds Tea") .
 
 ## Homepage
+![Boba Finds Tea](/public/imgs/home-page.png "Home page")
 
 ## Profile
 
