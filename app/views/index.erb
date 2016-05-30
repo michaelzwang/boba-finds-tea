@@ -1,0 +1,38 @@
+<div class="landing">
+  <section class="left">
+    <img src="/imgs/logo.png">
+  </section>
+  <section class="right">
+    <section class="form">
+      <h1>Boba Finds Tea</h1>
+      <p class="subtitle">Drink, share, and discover boba tea.</p>
+        <% if @errors %>
+        <% @errors.each do |e|%>
+        <%= e%>
+        <br>
+        <% end %>
+        <% end %>
+
+        <form method="post" action="/users/new">
+          <input type="hidden" name="_method" value="post">
+          <label for="user[full_name]"></label>
+          <input type="text" name="user[full_name]" value placeholder ="full name"><br/>
+          <label for="user[email]"></label>
+          <input type="text" name="user[email]" value placeholder ="email"><br/>
+          <label for="user[username]"></label>
+          <input type="text" name="user[username]" value placeholder ="username"><br/>
+          <label for="user[password]"></label>
+          <input type="password" name="user[password]" value placeholder ="password"><br/>
+          <button type="submit">Sign up</button>
+        </form>
+    </section>
+
+    <section class="form">
+      <p>Already a registered user?</p>
+      <form method="get" action="/users/login">
+        <button type="submit">Log in</button>
+      </form>
+    </section>
+  </section>
+</div>
+

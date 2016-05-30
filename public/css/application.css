@@ -1,0 +1,329 @@
+body {
+    background-color: #f2f2f2;
+}
+
+h1.heading {
+    font-family: 'Pacifico', cursive;
+    color: #2D7F48;
+}
+
+a {
+    text-decoration: none
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #2D7F48;
+    color: white;
+    padding: 10px 16px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #50CC78;
+}
+
+div.landing {
+    width: 940px;
+    margin: 4em auto;
+}
+
+section.left {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 4em;
+}
+
+section.left img {
+    height: 640px;
+}
+
+section.right {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2em 4em;
+}
+
+section.form {
+    width: 250px;
+    margin: 2em auto 1em auto;
+    border-radius: 2px;
+    background-color: #ffffff;
+    padding: 16px 32px 16px 32px;
+    border: 1px solid #cccccc;
+}
+
+section.form h1{
+    font-family: 'Pacifico', cursive;
+    color: #2D7F48;
+    margin: 4px auto;
+    text-align: center;
+}
+
+section.form p {
+    color: #4d4d4d;
+    margin: auto;
+    text-align: center;
+}
+
+section.form p.subtitle{
+    width: 200px;
+    margin: 4px auto 8px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2D7F48;
+    top: 0;
+    width: 100%;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a.icon {
+    padding: 0;
+}
+
+nav img {
+    height: 40px;
+    margin: 4px 8px 0 22px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #b3daff;
+}
+
+nav li.right-bar {
+    float: right;
+}
+
+
+/*posts styles*/
+
+
+img.icon {
+    height: 20px;
+}
+
+img.icon-imgs {
+    height: 16px;
+}
+
+div.post {
+    width: 400px;
+    margin: 3em auto;
+}
+
+div.post ul {
+    display: inline-block;
+    margin: 8px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+div.post section {
+    background-color: #ffffff;
+}
+
+div.post ul li {
+    list-style: none;
+}
+
+section.post-header {
+    border: 1px solid #b3b3b3;
+}
+
+section.post-header ul li {
+    display: inline;
+}
+
+section.post-header ul li.user-name {
+    font-weight: bold;
+}
+
+section.post-header ul li.cafe-name {
+    color: #50CC78;
+    font-weight: bold;
+}
+
+section.post-header ul li.cafe-location {
+    font-style: italic;
+}
+
+section.post-header ul.created_at {
+    display: inline;
+    float: right;
+}
+
+section.body {
+    border: 1px solid #b3b3b3;
+}
+
+section.post-image {
+    width: 100%;
+    margin-bottom: -6px;
+
+}
+
+section.post-image img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+section.post-body ul {
+    padding: 0 25px;
+    text-align: center;
+}
+
+section.post-body ul li a {
+    text-decoration: none;
+}
+
+section.description {
+    padding-top: 8px;
+    width: 88%;
+    margin: 0 auto;
+    border-top: 1px solid #b3b3b3;
+}
+
+section.description p.price {
+    margin: 0;
+    padding: 8px 8px 0 8px;
+}
+
+section.description p {
+    padding: 0 8px 16px;
+}
+
+h1.heading {
+    text-align: center;
+}
+
+/*create new post*/
+
+section.new-post {
+    width: 340px;
+}
+
+section.form select {
+    width: 130px;
+    margin-bottom: 16px;
+}
+
+section.new-post input.input-city {
+    width: 68%;
+}
+
+section.new-post input.input-state {
+    width: 30%;
+}
+
+section.new-post input.input-price {
+    width: 48%;
+}
+
+section.form textarea {
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+section.form form.item-form {
+    margin-top: -16px;
+    padding: 0
+}
+
+section.form form.item-form button {
+    margin-top: 16px;
+}
+
+/*User profile*/
+
+section.profile-info {
+    width: 400px;
+    margin: 0 auto;
+}
+
+section.profile-info h2 {
+    text-align: center;
+    margin: 2em auto 0 auto;
+}
+
+section.profile-info ul {
+    display: inline-block;
+    padding: 16px;
+    margin: 0;
+}
+
+section.profile-info ul li {
+    list-style: none;
+    text-align: center;
+}
+
+section.profile-info ul li {
+    list-style: none;
+    text-align: center;
+}
+
+section.profile-info ul li.count {
+    font-size: 24px;
+}
+
+section.profile-info ul li.likes {
+    width: 69px;
+}
+
+section.follow-info {
+    width: 314px;
+    margin: 0 auto;
+}
+
+section.post-button {
+    width: 340px;
+    margin: 0 auto;
+}
+
+
+
+
+
+

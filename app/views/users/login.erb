@@ -1,0 +1,16 @@
+<section class="form">
+    <h1>Boba Nation</h1>
+
+    <% if @error %>
+    <%= @error %><br>
+    <% end %>
+
+    <form method="post" action="/users/login">
+      <input type="hidden" name="_method" value="post">
+      <label for="user[email]"></label>
+      <input type="text" name="user[email]" value placeholder ="email"><br/>
+      <label for="user[password]"></label>
+      <input type="password" name="user[password]" value placeholder ="password"><br/>
+      <button type="submit">Log in</button>
+    </form>
+</section>

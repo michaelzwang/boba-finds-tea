@@ -1,0 +1,58 @@
+<%= erb :'_navbar' %>
+<section class="profile-info">
+  <h2><%= @user.full_name%></h2>
+  <section class="follow-info">
+    <ul>
+      <li class="count"><%= @user.following.count %></li>
+      <li>Following</li>
+    </ul>
+    <ul>
+      <li class="count"><%= @user.followers.count %></li>
+      <li>Followers</li>
+    </ul>
+     <ul>
+      <li class="count"><%= @user.likes.count %></li>
+      <li class="likes"><a href="/users/<%=@user.id%>/likes">Likes</a></li>
+    </ul>
+  </section>
+</section>
+
+<% if current_user == @user %>
+<section class="post-button">
+  <form class="item-form" method="get" action="/posts/new">
+    <button type="submit">Post</button>
+  </form>
+</section>
+<% end %>
+
+<section>
+  <ul>
+    <% if @user != current_user && !@user.followers.include?(current_user)%>
+    <section class="post-button">
+      <form method="post" action="/users/<%=@user.id%>/follow">
+          <button type="submit">Follow</button>
+      </form>
+    </section>
+    <% elsif @user != current_user && @user.followers.include?(current_user) %>
+    <section class="post-button">
+      <form method="post" action="/users/<%=@user.id%>/unfollow">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">Unfollow</button>
+      </form>
+    </section>
+    <% end %>
+      </ul>
+</section>
+
+<% if @posts != [] %>
+ <div class="container">
+<h1 class="heading">Boba</h1>
+<% @posts.each do |p| %>
+<%= erb :'posts/_posts_iteration', locals: {p: p} %>
+<% end %>
+</div>
+<% end %>
+<br>
+
+
+

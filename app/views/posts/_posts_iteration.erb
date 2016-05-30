@@ -1,0 +1,55 @@
+<div class="post">
+    <section class="post-header">
+      <ul>
+        <a href="/users/profile/<%= p.user.id %>"><li class="user-name"><%=p.user.username%></li></a>
+        <li class="cafe-name"><%=p.cafe_name%></li>
+        <li class="cafe-location"><%= p.city %>, <%= p.state %></li>
+      </ul>
+      <ul class="created_at">
+        <% if (Time.now - p.created_at) >= 86400 %>
+        <li><%=((Time.now - p.created_at)/86400).round%>d</li>
+        <% elsif (Time.now - p.created_at) >= 3600%>
+        <li><%=((Time.now - p.created_at)/3600).round%>h</li>
+        <% elsif (Time.now - p.created_at) >= 60%>
+        <li><%=((Time.now - p.created_at)/60).round%>m</li>
+        <% else %>
+        <li><%=(Time.now - p.created_at).round%>s</li>
+        <% end %>
+      </ul>
+    </section>
+
+    <section class="post-image">
+      <img src="<%=p.image_url%>">
+    </section>
+
+    <section class="body">
+      <section class="post-body">
+        <ul>
+          <li class="">
+          <% if current_user.liked_posts.include?(p) %>
+            <img class="icon-imgs" src="/imgs/like.png">
+          <% else %>
+            <a id="like-link <%=p.id%>" href="/posts/<%=p.id%>/likes"><img class="icon-imgs" src="/imgs/like.png"></a></li>
+          <% end %>
+        <li><span id="like-count"><%= p.like_count %></span></li>
+        </ul>
+        <ul>
+          <li class=""><img class="icon-imgs" src="/imgs/boba.png"></li>
+          <li><span><%= p.quality %></span></li>
+        </ul>
+        <ul>
+          <li class=""><a href="/maptest/posts/<%= p.id %>"><img class="icon" src="https://freeiconshop.com/files/edd/location-marker-outline-filled.png"></a></li>
+          <li><a href="/maptest/posts/<%= p.id %>">find</li>
+        </ul>
+        <ul>
+          <li class=""><a href="<%=p.yelp_url%>"><img class="icon" src="http://dogwood.pizza/wp-content/uploads/2015/07/yelp_icon.png"></a></li>
+          <li><a href="<%=p.yelp_url%>">yelp</a></span></li>
+        </ul>
+      </section>
+
+      <section class="description">
+        <p class="price">$<%= p.price %></p>
+        <p><%= p.description %></p>
+      </section>
+    </section>
+  </div>

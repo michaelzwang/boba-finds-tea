@@ -1,0 +1,7 @@
+<%= erb :'_navbar' %>
+<div class="container">
+<h1 class="heading">Boba Lova's You Follow</h1>
+<% @following_users_posts[0..9].each do |p| %>
+<%= erb :'posts/_posts_iteration', locals: {p: p} %>
+<% end %>
+</div>

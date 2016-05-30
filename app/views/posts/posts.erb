@@ -1,0 +1,9 @@
+<%= erb :'_navbar' %>
+<div class="container">
+<h1 class="heading">Recent</h1>
+<% @posts.each do |p| %>
+  <%= erb :'posts/_posts_iteration', locals: {p: p} %>
+<% end %>
+</div>
+
+

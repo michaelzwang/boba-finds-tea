@@ -1,0 +1,14 @@
+<%= erb :'_navbar' %>
+<section class="form">
+    <% if @errors %>
+    <% @errors.each do |e|%>
+    <%= e%>
+    <br>
+    <% end %>
+    <% end %><br>
+<form class="item-form" method="get" action="/posts/search_results">
+  <label>cafe name: <input type="text" name="post[cafe_name]"></label><br>
+  <label>city: <input type="text" name="post[city]"></input></label>
+  <input type="submit" value="boba here I go">
+</form>
+</section>

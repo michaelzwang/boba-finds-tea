@@ -1,0 +1,21 @@
+<%= erb :'_navbar' %>
+<section class="form">
+<form class="item-form" method="post" action="/posts/<%=@post.id%>">
+  <input type="hidden" name="_method" value="put">
+  <label>cafe name: <input type="text" name="post[cafe_name]" value="<%=@post.cafe_name%>"></label><br>
+  <label>city: <input type="text" name="post[city]" value="<%=@post.city%>"></input></label>
+  <label>state: <input type="text" name="post[state]" value="<%=@post.state%>"></input></label>
+  <label>price: $<input type="text" name="post[price]"></label><br>
+  <label for="boba-quality">quality:</label>
+    <select id="boba-quality" name="post[quality]">
+      <option value="none" <%=selected_quality%>>-----</option>
+      <option value="plush" <%=selected_quality%>>plush</option>
+      <option value="chewy" <%=selected_quality%>>chewy</option>
+      <option value="medium" <%=selected_quality%>>aight</option>
+      <option value="mushy" <%=selected_quality%>>mushy</option>
+      <option value="hard" <%=selected_quality%>>hard</option>
+    </select>
+  <textarea name="post[description]" rows="5" cols="30" placeholder="item description"></textarea><br>
+  <input type="submit" value="post">
+</form>
+</section>

@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <ul>
+      <% if current_user %>
+      <li><a class="icon" href="/posts/feed"><img src="/imgs/icon.png"></a></li>
+      <li><a href="/posts">discover</a></li>
+      <li><a href="/posts/search">search</a></li>
+      <li class="right-bar"><a href="/users/logout">log out</a></li>
+      <li><a href="/posts/new">post</a></li>
+      <li class="right-bar"><a href="/users/profile/<%= current_user.id%>"><%=current_user.username%></a></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

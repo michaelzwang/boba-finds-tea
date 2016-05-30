@@ -1,0 +1,14 @@
+<%= erb :'_navbar' %>
+
+<h2><%=@post.cafe_name%></h2>
+<p><%= @post.city %>, <%= @post.state %></p>
+
+<p>price: $<%= @post.price %></p>
+<p>quality: <%=@post.quality%></p>
+
+<p><%= @post.description %></p>
+<p><%= @post.like_count %> likes</p>
+
+
+<a href="/posts/<%=@post.id%>/edit">edit</a>
+<%= erb :'posts/delete_post', locals: {post: @post} %>

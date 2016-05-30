@@ -1,0 +1,7 @@
+<%= erb :'_navbar' %>
+<div class="container">
+<h1 class="heading"><%=@user.username%>'s liked posts</h1>
+<% @user.liked_posts.reverse.each do |p| %>
+<%= erb :'posts/_posts_iteration', locals: {p: p} %>
+<% end %>
+</div>

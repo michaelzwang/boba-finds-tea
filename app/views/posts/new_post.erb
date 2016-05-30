@@ -1,0 +1,32 @@
+<%= erb :'_navbar' %>
+<section class="form new-post">
+  <h1>Share!</h1>
+    <% if @errors %>
+    <% @errors.each do |e|%>
+    <%= e%>
+    <br>
+    <% end %>
+    <% end %><br>
+
+  <form class="item-form" method="post" action="/posts">
+    <label><input type="text" name="post[image_url]" value placeholder ="image url"></input></label>
+    <label><input type="text" name="post[cafe_name]" value placeholder ="cafe name"></label>
+    <label><input type="text" name="post[street]" value placeholder ="1034 Boba Ln."></label>
+    <label><input class="input-city" type="text" name="post[city]" value placeholder ="city"></input></label>
+    <label><input class="input-state" type="text" name="post[state]" value placeholder ="state"></input></label>
+    <label><input type="text" name="post[yelp_url]" value placeholder ="yelp url"></input></label>
+    <label><input class="input-price" type="text" name="post[price]" value placeholder ="$"></label><br>
+    <label for="boba-quality"></label>
+      <select id="boba-quality" name="post[quality]">
+        <option class="select" value="none">select quality</option>
+        <option value="plush">plush</option>
+        <option value="chewy">chewy</option>
+        <option value="aight">aight</option>
+        <option value="mushy">mushy</option>
+        <option value="hard">hard</option>
+      </select>
+    <textarea name="post[description]" rows="5" cols="39" placeholder="item description"></textarea><br>
+    <button type="submit">Post</button>
+  </form>
+
+</section>
