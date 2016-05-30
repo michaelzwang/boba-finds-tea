@@ -13,8 +13,7 @@ Boba Finds Tea is deployed on [Heroku](https://damp-journey-79720.herokuapp.com/
 ## Homepage
 ![Boba Finds Tea](/public/imgs/home-page.png "Home page")
 
-## Profile
-
 ## Make a Post
+![New Post](/public/imgs/new-post.png "New Post")
 
 ## PostgreSQL Schema
